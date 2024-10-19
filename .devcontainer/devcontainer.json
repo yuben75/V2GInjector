@@ -1,0 +1,23 @@
+{
+    "name": "Python Docker Dev",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "settings": {
+        "python.pythonPath": "/usr/local/bin/python3",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+    ],
+    "postCreateCommand": "apt get install pip",
+    "postCreateCommand": "pip install -r requirements.txt",
+    "postCreateCommand": "cd /home/dshare/Download/python_install/",
+    "postCreateCommand": "code --install-extension ms-python.python-2024.16.1@linux-x64.vsix",
+    "postCreateCommand": "code --install-extension donjayamanne.python-environment-manager-1.2.4.vsix",
+    "postCreateCommand": "code --install-extension donjayamanne.python-extension-pack-1.7.0.vsix",
+    "postCreateCommand": "code --install-extension smcpeak.default-keys-windows-0.0.10.vsix",
+
+    "remoteUser": "ubuntu"
+}
